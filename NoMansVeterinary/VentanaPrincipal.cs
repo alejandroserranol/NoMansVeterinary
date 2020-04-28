@@ -7,28 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Security.Cryptography;
+
 
 namespace NoMansVeterinary
 {
     public partial class VentanaPrincipal : Form
     {
-        MD5 mD5 = MD5.Create();
         Conexion conexion = new Conexion();
         public VentanaPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void insertaUsuatio_Click(object sender, EventArgs e)
-        {
-            byte[] b = Encoding.ASCII.GetBytes(passBox.Text);
-            byte[] hash = mD5.ComputeHash(b);
-            StringBuilder sb = new StringBuilder();
-            foreach (var a in hash)
-                sb.Append(a.ToString("X2"));
-
-            conexion.insertaUsario(dniBox.Text, nombreBox.Text, apellidosBox.Text, sb.ToString(), emailBox.Text, telBox.Text, depBox.Text);
+            dataGridViewUsuarios.DataSource = conexion.getTodosUsuarios();
+            dataGridViewUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewUsuarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
 
 
@@ -40,6 +31,10 @@ namespace NoMansVeterinary
             Application.Exit();
         }
 
-     
+        private void nuevoUsuario_Click(object sender, EventArgs e)
+        {
+            InsertaUsuario u = new InsertaUsuario();
+            u.Show();
+        }
     }
 }
