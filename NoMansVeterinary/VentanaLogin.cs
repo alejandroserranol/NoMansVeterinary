@@ -20,15 +20,15 @@ namespace NoMansVeterinary
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            VentanaPrincipal v = new VentanaPrincipal();
-            v.Show();
+            //this.Hide();
+            //VentanaPrincipal v = new VentanaPrincipal();
+            //v.Show();
 
             if (conexion.LoginVeterinario(userBox.Text, userPassBox.Text))
             {
-                //this.Hide();
-                //VentanaPrincipal v = new VentanaPrincipal();
-                //v.Show();
+                this.Hide();
+                VentanaPrincipal v = new VentanaPrincipal();
+                v.Show();
             }
         }
     }
