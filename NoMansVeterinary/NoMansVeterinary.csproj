@@ -97,6 +97,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DatosCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosCliente.Designer.cs">
+      <DependentUpon>DatosCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatosUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosUsuarios.Designer.cs">
+      <DependentUpon>DatosUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertaCliente.Designer.cs">
+      <DependentUpon>InsertaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +135,15 @@
     <Compile Include="VentanaPrincipal.Designer.cs">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DatosCliente.resx">
+      <DependentUpon>DatosCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatosUsuarios.resx">
+      <DependentUpon>DatosUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertaCliente.resx">
+      <DependentUpon>InsertaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InsertaUsuario.resx">
       <DependentUpon>InsertaUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +182,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
+    <None Include="Resources\marco8.png" />
+    <None Include="Resources\marco7.png" />
+    <None Include="Resources\marco6.png" />
+    <None Include="Resources\marco5.png" />
+    <None Include="Resources\marco4.png" />
+    <None Include="Resources\marco3.png" />
+    <None Include="Resources\Medico-icono-mujer.png" />
+    <None Include="Resources\marco.png" />
+    <None Include="Resources\fondo1.jpg" />
+    <None Include="Resources\fondo3.jpg" />
+    <None Include="Resources\fondo2.jpg" />
+    <None Include="Resources\fondo.jpg" />
     <None Include="Resources\information.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

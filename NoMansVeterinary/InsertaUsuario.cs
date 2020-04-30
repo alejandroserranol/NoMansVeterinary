@@ -23,7 +23,7 @@ namespace NoMansVeterinary
         {
             String textoPassword = passBox.Text;
             String myHash = BCrypt.Net.BCrypt.HashPassword(textoPassword, BCrypt.Net.BCrypt.GenerateSalt());
-            conexion.insertaUsario(idBox.Text, dniBox.Text, nombreBox.Text, apellidoBox.Text, myHash, emailBox.Text, telefonoBox.Text, tipo_usuarioBox.Text);
+            conexion.InsertaUsuario(idBox.Text, dniBox.Text, nombreBox.Text, apellidoBox.Text, myHash, emailBox.Text, telefonoBox.Text, departamentoBox.Text);
         }
 
     }
